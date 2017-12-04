@@ -1,0 +1,5 @@
+C:\Development\Local-GitHub\DynNAVLookupAD\CSharp\DynNAVLookupAD\DynNAVLookupAD\bin\Debug\DynNAVLookupAD.dll
+C:\Development\Local-GitHub\DynNAVLookupAD\CSharp\DynNAVLookupAD\DynNAVLookupAD\bin\Debug\DynNAVLookupAD.pdb
+C:\Development\Local-GitHub\DynNAVLookupAD\CSharp\DynNAVLookupAD\DynNAVLookupAD\obj\Debug\DynNAVLookupAD.csprojResolveAssemblyReference.cache
+C:\Development\Local-GitHub\DynNAVLookupAD\CSharp\DynNAVLookupAD\DynNAVLookupAD\obj\Debug\DynNAVLookupAD.dll
+C:\Development\Local-GitHub\DynNAVLookupAD\CSharp\DynNAVLookupAD\DynNAVLookupAD\obj\Debug\DynNAVLookupAD.pdb
