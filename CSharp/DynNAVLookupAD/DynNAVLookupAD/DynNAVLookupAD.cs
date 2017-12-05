@@ -14,6 +14,7 @@ namespace DynNAVLookupAD
 
         GroupPrincipal group;
         List<Principal> users;
+        List<WinLogon> myWinLogon;
         int Counter;
         PrincipalContext ctx;
 
@@ -26,13 +27,14 @@ namespace DynNAVLookupAD
             // iterate over its members
             if (group != null)
             {
+                myWinLogon = new List<WinLogon>();
                 users = new List<Principal>();
                 foreach (Principal p in group.Members)
                 {
                     if (p is UserPrincipal)
                     {
                         users.Add(p);
-                        //new WinLogon(p.Sid.ToString(), p.SamAccountName, p.Name, p.Description, p.DisplayName, p.DistinguishedName, p.Guid.ToString(), p.UserPrincipalName);
+                        myWinLogon.Add(new WinLogon(p.Sid.ToString(), p.SamAccountName, p.Name, p.Description, p.DisplayName, p.DistinguishedName, p.Guid.ToString(), p.UserPrincipalName));
                         Counter += 1;
                     }
                 }
@@ -43,8 +45,8 @@ namespace DynNAVLookupAD
         {
             Principal p = users.ElementAt(i);
             //users.IndexOf(p, i);
-            WinLogon WL = new WinLogon(p.Sid.ToString(), p.SamAccountName, p.Name, p.Description, p.DisplayName, p.DistinguishedName, p.Guid.ToString(), p.UserPrincipalName);
-            return WL;
+            WinLogon MyWinLogon = new WinLogon(p.Sid.ToString(), p.SamAccountName, p.Name, p.Description, p.DisplayName, p.DistinguishedName, p.Guid.ToString(), p.UserPrincipalName);
+            return MyWinLogon;
         }
     }
 
