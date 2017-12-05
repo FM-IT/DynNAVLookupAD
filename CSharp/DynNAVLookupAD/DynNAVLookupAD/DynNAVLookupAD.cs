@@ -48,6 +48,18 @@ namespace DynNAVLookupAD
             WinLogon MyWinLogon = new WinLogon(p.Sid.ToString(), p.SamAccountName, p.Name, p.Description, p.DisplayName, p.DistinguishedName, p.Guid.ToString(), p.UserPrincipalName);
             return MyWinLogon;
         }
+        public WinLogon getMembersOfListIndex(int i)
+        {
+            WinLogon WL;
+            WL = myWinLogon.ElementAt(i);
+            return WL;
+        }
+
+        public IEnumerator<WinLogon> GetEnumerator()
+        {
+            foreach (var WL in myWinLogon)
+                yield return WL;
+        }
     }
 
     // Simple business object.
